@@ -26,7 +26,7 @@ const inflate = (node, index, path) => {
   }
 
   const fieldNames = Object.keys(node);
-  const result = {};
+  const result = Array.isArray(node) ? [] : {};
 
   for (const fieldName of fieldNames) {
     const value = node[fieldName];
